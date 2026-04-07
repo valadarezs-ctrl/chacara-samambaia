@@ -1,265 +1,267 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)file:///C:/Users/LucasQueiroz/Downloads/index.html -->
-<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chácara Samambaia — Goiânia</title>
-<link href="./Chácara Samambaia — Goiânia_files/css2" rel="stylesheet">
+<title>Chacara Samambaia - Goiania</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream: #F4EFE4;
-    --dark: #1A1810;
-    --green: #3D5A3E;
-    --green-light: #6B8F6C;
-    --gold: #C9A84C;
-    --warm-white: #FDFAF2;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--cream); color: var(--dark); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
+:root {
+  --cream: #F4EFE4;
+  --dark: #1A1810;
+  --green: #3D5A3E;
+  --green-light: #6B8F6C;
+  --gold: #C9A84C;
+  --warm: #FDFAF2;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--dark);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden}
 
-  /* NAV */
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.8rem 4rem; display: flex; justify-content: space-between; align-items: center; transition: background 0.5s, padding 0.4s; }
-  nav.scrolled { background: rgba(26,24,16,0.94); backdrop-filter: blur(16px); padding: 1rem 4rem; box-shadow: 0 1px 0 rgba(201,168,76,0.15); }
-  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--warm-white); letter-spacing: 0.06em; text-decoration: none; }
-  .nav-logo span { color: var(--gold); }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; transition: color 0.3s; }
-  .nav-links a:hover { color: var(--gold); }
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.8rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:background .5s,padding .4s}
+nav.scrolled{background:rgba(26,24,16,.95);backdrop-filter:blur(16px);padding:1rem 3rem;box-shadow:0 1px 0 rgba(201,168,76,.15)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--warm);letter-spacing:.06em;text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover{color:var(--gold)}
 
-  /* HERO */
-  .hero { position: relative; height: 100vh; min-height: 620px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; overflow: hidden; background: var(--dark); }
-  .hero-slides { position: absolute; inset: 0; }
-  .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.5s ease; animation: subtleZoom 14s ease-in-out infinite alternate; }
-  .hero-slide.active { opacity: 0.68; }
-  @keyframes subtleZoom { from { transform: scale(1); } to { transform: scale(1.07); } }
-  .hero-slide:nth-child(1) { background-image: url('1000255326.jpg'); }
-  .hero-slide:nth-child(2) { background-image: url('1000255321.jpg'); animation-delay: -3s; }
-  .hero-slide:nth-child(3) { background-image: url('1000255314.jpg'); animation-delay: -6s; }
-  .hero-slide:nth-child(4) { background-image: url('1000255312.jpg'); animation-delay: -9s; }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,24,16,0.1) 0%, rgba(26,24,16,0) 35%, rgba(26,24,16,0.94) 100%); }
-  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem 6rem; animation: fadeUp 1.4s cubic-bezier(0.22,1,0.36,1) both; }
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-  .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.45em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; font-weight: 300; }
-  .hero-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(3.2rem, 10vw, 7.5rem); color: var(--warm-white); line-height: 0.92; }
-  .hero-title em { font-style: italic; color: var(--gold); }
-  .hero-address { margin-top: 1.8rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); line-height: 1.9; }
-  .hero-scroll { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; color: rgba(255,255,255,0.35); font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; animation: scrollBounce 2.5s ease-in-out infinite; }
-  .hero-scroll::before { content: ''; width: 1px; height: 45px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3)); display: block; }
-  @keyframes scrollBounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+/* HERO */
+.hero{position:relative;height:100vh;min-height:600px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;overflow:hidden;background:var(--dark)}
+.hero-slides{position:absolute;inset:0}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.5s ease}
+.hero-slide.active{opacity:.68}
+.hs1{background-image:url('1000255326.jpg')}
+.hs2{background-image:url('1000255321.jpg')}
+.hs3{background-image:url('1000255314.jpg')}
+.hs4{background-image:url('1000255312.jpg')}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,24,16,.1) 0%,rgba(26,24,16,0) 35%,rgba(26,24,16,.94) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 2rem 6rem;animation:fadeUp 1.4s cubic-bezier(.22,1,.36,1) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.hero-eyebrow{font-size:.68rem;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;font-weight:300}
+.hero-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(3rem,10vw,7.5rem);color:var(--warm);line-height:.92}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-address{margin-top:1.8rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);line-height:1.9}
+.hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.6rem;color:rgba(255,255,255,.35);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;animation:scrollB 2.5s ease-in-out infinite}
+.hero-scroll::before{content:'';width:1px;height:45px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.3));display:block}
+@keyframes scrollB{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 
-  /* LABELS & TITLES */
-  .section-label { font-size: 0.63rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--green); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; }
-  .section-label::before { content: ''; width: 36px; height: 1px; background: var(--green); flex-shrink: 0; }
-  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.1; color: var(--dark); }
-  .section-title em { font-style: italic; color: var(--green); }
+/* LABELS */
+.section-label{font-size:.63rem;letter-spacing:.42em;text-transform:uppercase;color:var(--green);margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem}
+.section-label::before{content:'';width:36px;height:1px;background:var(--green);flex-shrink:0}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;color:var(--dark)}
+.section-title em{font-style:italic;color:var(--green)}
 
-  /* INTRO */
-  .intro-section { background: var(--warm-white); padding: 7rem 4rem; }
-  .intro-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-  .intro-text p { margin-top: 1.8rem; line-height: 2; font-size: 0.95rem; color: #504840; }
-  .intro-text p + p { margin-top: 1rem; }
-  .dados-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2.5rem; }
-  .dado { padding: 1.6rem 1.4rem; border: 1px solid rgba(61,90,62,0.18); background: var(--cream); transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s; cursor: default; }
-  .dado:hover { border-color: var(--green); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(61,90,62,0.1); }
-  .dado-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
-  .dado-label { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-light); margin-bottom: 0.4rem; }
-  .dado-value { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; color: var(--dark); line-height: 1.2; }
-  .dado-value small { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 300; color: #888; }
-  .cta-btn { display: inline-block; margin-top: 2.5rem; padding: 1rem 2.5rem; background: var(--green); color: var(--warm-white); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; transition: background 0.3s, transform 0.3s; }
-  .cta-btn:hover { background: var(--dark); transform: translateY(-2px); }
+/* SOBRE */
+.sobre{background:var(--warm);padding:7rem 3rem}
+.sobre-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.sobre-text p{margin-top:1.8rem;line-height:2;font-size:.95rem;color:#504840}
+.sobre-text p+p{margin-top:1rem}
+.dados-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.5rem}
+.dado{padding:1.5rem 1.3rem;border:1px solid rgba(61,90,62,.18);background:var(--cream);transition:border-color .35s,transform .35s,box-shadow .35s;cursor:default}
+.dado:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 12px 30px rgba(61,90,62,.1)}
+.dado-icon{font-size:1.3rem;margin-bottom:.5rem}
+.dado-label{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--green-light);margin-bottom:.3rem}
+.dado-value{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--dark);line-height:1.2}
+.dado-value small{font-size:.72rem;font-family:'Jost',sans-serif;font-weight:300;color:#888}
+.cta-btn{display:inline-block;margin-top:2.5rem;padding:1rem 2.5rem;background:var(--green);color:var(--warm);text-decoration:none;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;transition:background .3s,transform .3s}
+.cta-btn:hover{background:var(--dark);transform:translateY(-2px)}
 
-  /* GALERIA */
-  .galeria-section { background: var(--dark); padding: 6rem 0 4rem; }
-  .galeria-header { padding: 0 4rem 3rem; max-width: 1280px; margin: 0 auto; }
-  .galeria-header .section-label { color: var(--gold); }
-  .galeria-header .section-label::before { background: var(--gold); }
-  .galeria-header .section-title { color: var(--warm-white); }
-  .galeria-header .section-title em { color: var(--gold); }
-  .carousel-outer { position: relative; overflow: hidden; }
-  .carousel-track { display: flex; gap: 1.2rem; padding: 0 4rem; transition: transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94); will-change: transform; }
-  .carousel-slide { flex: 0 0 calc(33.333% - 0.8rem); min-width: 260px; aspect-ratio: 4/3; overflow: hidden; cursor: pointer; position: relative; }
-  .carousel-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.65s ease, filter 0.5s ease; filter: brightness(0.8) saturate(0.85); display: block; }
-  .carousel-slide:hover img { transform: scale(1.07); filter: brightness(1) saturate(1.1); }
-  .slide-num { position: absolute; top: 1rem; left: 1rem; font-size: 0.6rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.45); }
-  .carousel-controls { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem 0; max-width: 1280px; margin: 0 auto; }
-  .carousel-btns { display: flex; gap: 0.8rem; }
-  .carousel-btn { width: 48px; height: 48px; border: 1px solid rgba(255,255,255,0.18); background: transparent; color: rgba(255,255,255,0.65); cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; transition: border-color 0.3s, color 0.3s, background 0.3s; }
-  .carousel-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
-  .carousel-dots { display: flex; gap: 0.5rem; align-items: center; }
-  .carousel-dot { width: 5px; height: 5px; background: rgba(255,255,255,0.2); border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.3s; }
-  .carousel-dot.active { background: var(--gold); transform: scale(1.4); }
+/* GALERIA */
+.galeria{background:var(--dark);padding:6rem 0 4rem}
+.galeria-header{padding:0 3rem 3rem;max-width:1200px;margin:0 auto}
+.galeria-header .section-label{color:var(--gold)}
+.galeria-header .section-label::before{background:var(--gold)}
+.galeria-header .section-title{color:var(--warm)}
+.galeria-header .section-title em{color:var(--gold)}
+.carousel-outer{overflow:hidden}
+.carousel-track{display:flex;gap:1.2rem;padding:0 3rem;transition:transform .65s cubic-bezier(.25,.46,.45,.94)}
+.carousel-slide{flex:0 0 calc(33.333% - .8rem);min-width:260px;aspect-ratio:4/3;overflow:hidden;cursor:pointer;position:relative}
+.carousel-slide img{width:100%;height:100%;object-fit:cover;transition:transform .65s ease,filter .5s ease;filter:brightness(.8) saturate(.85);display:block}
+.carousel-slide:hover img{transform:scale(1.07);filter:brightness(1) saturate(1.1)}
+.slide-num{position:absolute;top:1rem;left:1rem;font-size:.6rem;letter-spacing:.2em;color:rgba(255,255,255,.4)}
+.carousel-controls{display:flex;justify-content:space-between;align-items:center;padding:2rem 3rem 0;max-width:1200px;margin:0 auto}
+.carousel-btns{display:flex;gap:.8rem}
+.carousel-btn{width:48px;height:48px;border:1px solid rgba(255,255,255,.18);background:transparent;color:rgba(255,255,255,.6);cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:border-color .3s,color .3s,background .3s}
+.carousel-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.08)}
+.carousel-dots{display:flex;gap:.5rem;align-items:center}
+.carousel-dot{width:5px;height:5px;background:rgba(255,255,255,.2);border-radius:50%;cursor:pointer;transition:background .3s,transform .3s}
+.carousel-dot.active{background:var(--gold);transform:scale(1.4)}
 
-  /* LIGHTBOX */
-  .lightbox { position: fixed; inset: 0; background: rgba(10,10,8,0.97); z-index: 1000; display: none; align-items: center; justify-content: center; }
-  .lightbox.open { display: flex; }
-  .lightbox img { max-width: 90vw; max-height: 88vh; object-fit: contain; box-shadow: 0 30px 80px rgba(0,0,0,0.8); }
-  .lb-close { position: absolute; top: 2rem; right: 2.5rem; color: rgba(255,255,255,0.55); font-size: 2rem; cursor: pointer; background: none; border: none; transition: color 0.3s; line-height: 1; }
-  .lb-close:hover { color: var(--gold); }
-  .lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; color: rgba(255,255,255,0.45); font-size: 2.5rem; cursor: pointer; padding: 1rem; transition: color 0.3s; }
-  .lb-prev { left: 1rem; } .lb-next { right: 1rem; }
-  .lb-prev:hover, .lb-next:hover { color: var(--gold); }
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(10,10,8,.97);z-index:1000;display:none;align-items:center;justify-content:center}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:88vh;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.8)}
+.lb-close{position:absolute;top:2rem;right:2.5rem;color:rgba(255,255,255,.55);font-size:2rem;cursor:pointer;background:none;border:none;transition:color .3s;line-height:1}
+.lb-close:hover{color:var(--gold)}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.45);font-size:2.5rem;cursor:pointer;padding:1rem;transition:color .3s}
+.lb-prev{left:1rem}.lb-next{right:1rem}
+.lb-prev:hover,.lb-next:hover{color:var(--gold)}
 
-  /* VÍDEO */
-  .video-section { background: var(--cream); padding: 7rem 4rem; }
-  .video-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .video-text p { margin-top: 1.5rem; line-height: 2; font-size: 0.95rem; color: #504840; }
-  .video-player-wrap { display: flex; justify-content: center; }
-  .video-phone { position: relative; width: 290px; background: #111; border-radius: 32px; padding: 14px; box-shadow: 0 50px 120px rgba(26,24,16,0.4), 0 0 0 1px rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03); }
-  .video-phone::before { content: ''; position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 55px; height: 5px; background: rgba(255,255,255,0.06); border-radius: 3px; }
-  .video-phone-screen { border-radius: 22px; overflow: hidden; background: #000; aspect-ratio: 9/16; }
-  .video-phone-screen video { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .play-row { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
-  .play-btn { padding: 0.85rem 2rem; background: var(--green); color: white; border: none; font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, transform 0.3s; display: inline-flex; align-items: center; gap: 0.5rem; }
-  .play-btn:hover { background: var(--dark); transform: translateY(-2px); }
-  .mute-btn { padding: 0.85rem 1.5rem; background: transparent; color: var(--green); border: 1px solid var(--green); font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; }
-  .mute-btn:hover { background: var(--green); color: white; }
+/* VIDEO */
+.video{background:var(--cream);padding:7rem 3rem}
+.video-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.video-text p{margin-top:1.5rem;line-height:2;font-size:.95rem;color:#504840}
+.video-player-wrap{display:flex;justify-content:center}
+.video-phone{position:relative;width:280px;background:#111;border-radius:32px;padding:14px;box-shadow:0 50px 120px rgba(26,24,16,.4),0 0 0 1px rgba(255,255,255,.07)}
+.video-phone::before{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:55px;height:5px;background:rgba(255,255,255,.06);border-radius:3px}
+.video-screen{border-radius:22px;overflow:hidden;background:#000;aspect-ratio:9/16}
+.video-screen video{width:100%;height:100%;object-fit:cover;display:block}
+.play-row{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.play-btn{padding:.85rem 2rem;background:var(--green);color:white;border:none;font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .3s,transform .3s;display:inline-flex;align-items:center;gap:.5rem}
+.play-btn:hover{background:var(--dark);transform:translateY(-2px)}
+.mute-btn{padding:.85rem 1.5rem;background:transparent;color:var(--green);border:1px solid var(--green);font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:all .3s}
+.mute-btn:hover{background:var(--green);color:white}
 
-  /* LOCALIZAÇÃO */
-  .localizacao-section { background: var(--green); padding: 6rem 4rem; }
-  .loc-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: start; }
-  .localizacao-section .section-label { color: rgba(255,255,255,0.45); }
-  .localizacao-section .section-label::before { background: rgba(255,255,255,0.35); }
-  .localizacao-section .section-title { color: var(--warm-white); }
-  .localizacao-section .section-title em { color: var(--gold); }
-  .loc-info { margin-top: 2rem; }
-  .loc-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .loc-item:last-child { border-bottom: none; }
-  .loc-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
-  .loc-text strong { display: block; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 0.3rem; }
-  .loc-text span { font-size: 0.95rem; color: var(--warm-white); line-height: 1.6; }
-  .map-embed { border-radius: 4px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.1); }
-  .map-embed iframe { width: 100%; height: 430px; border: none; display: block; filter: saturate(0.75) contrast(1.05); }
+/* LOCALIZACAO */
+.localizacao{background:var(--green);padding:6rem 3rem}
+.loc-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start}
+.localizacao .section-label{color:rgba(255,255,255,.45)}
+.localizacao .section-label::before{background:rgba(255,255,255,.35)}
+.localizacao .section-title{color:var(--warm)}
+.localizacao .section-title em{color:var(--gold)}
+.loc-info{margin-top:2rem}
+.loc-item{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.loc-item:last-child{border-bottom:none}
+.loc-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
+.loc-text strong{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.3rem}
+.loc-text span{font-size:.95rem;color:var(--warm);line-height:1.6}
+.map-wrap{border-radius:4px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.1)}
+.map-wrap iframe{width:100%;height:430px;border:none;display:block;filter:saturate(.75) contrast(1.05)}
 
-  /* CONTATO */
-  .contato-section { background: var(--dark); padding: 6rem 4rem; text-align: center; }
-  .contato-section .section-label { justify-content: center; }
-  .contato-section .section-label::before { display: none; }
-  .contato-section .section-title { color: var(--warm-white); }
-  .contato-section .section-title em { color: var(--gold); }
-  .contato-sub { margin-top: 1.5rem; color: rgba(255,255,255,0.45); font-size: 0.9rem; line-height: 2; }
-  .contato-btns { margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .btn-wpp { display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 2.5rem; background: #25D366; color: white; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; transition: transform 0.3s, box-shadow 0.3s; }
-  .btn-wpp:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37,211,102,0.3); }
-  .btn-ig { display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 2.5rem; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; transition: all 0.3s; }
-  .btn-ig:hover { border-color: #E1306C; color: #E1306C; transform: translateY(-3px); }
-  .btn-fb { display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 2.5rem; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; transition: all 0.3s; }
-  .btn-fb:hover { border-color: #1877F2; color: #1877F2; transform: translateY(-3px); }
+/* CONTATO */
+.contato{background:var(--dark);padding:6rem 3rem;text-align:center}
+.contato .section-label{justify-content:center}
+.contato .section-label::before{display:none}
+.contato .section-title{color:var(--warm)}
+.contato .section-title em{color:var(--gold)}
+.contato-sub{margin-top:1.5rem;color:rgba(255,255,255,.45);font-size:.9rem;line-height:2}
+.contato-btns{margin-top:3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-wpp{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2rem;background:#25D366;color:white;text-decoration:none;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;transition:transform .3s,box-shadow .3s;border-radius:2px}
+.btn-wpp:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(37,211,102,.3)}
+.btn-email{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2rem;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);text-decoration:none;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;transition:all .3s;border-radius:2px}
+.btn-email:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.btn-ig{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2rem;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);text-decoration:none;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;transition:all .3s;border-radius:2px}
+.btn-ig:hover{border-color:#E1306C;color:#E1306C;transform:translateY(-3px)}
+.btn-fb{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2rem;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);text-decoration:none;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;transition:all .3s;border-radius:2px}
+.btn-fb:hover{border-color:#1877F2;color:#1877F2;transform:translateY(-3px)}
 
-  /* FOOTER */
-  footer { background: #0C0B07; padding: 2.5rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.04); }
-  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(255,255,255,0.35); }
-  .footer-logo span { color: var(--gold); }
-  footer p { font-size: 0.63rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.22); }
+/* FOOTER */
+footer{background:#0C0B07;padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.04);flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(255,255,255,.35)}
+.footer-logo span{color:var(--gold)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:rgba(255,255,255,.25);text-decoration:none;font-size:.63rem;letter-spacing:.1em;transition:color .3s}
+.footer-links a:hover{color:var(--gold)}
+footer p{font-size:.63rem;letter-spacing:.1em;color:rgba(255,255,255,.2)}
 
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    nav { padding: 1.2rem 1.5rem; }
-    nav.scrolled { padding: 0.8rem 1.5rem; }
-    .nav-links { display: none; }
-    .intro-inner, .video-inner, .loc-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .intro-section, .video-section, .localizacao-section, .contato-section { padding: 5rem 1.5rem; }
-    .galeria-header, .carousel-controls { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .carousel-track { padding: 0 1.5rem; }
-    .carousel-slide { flex: 0 0 calc(82% - 0.6rem); }
-    .video-phone { width: 230px; }
-    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
-  }
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:1.2rem 1.5rem}
+  nav.scrolled{padding:.8rem 1.5rem}
+  .nav-links{display:none}
+  .sobre-inner,.video-inner,.loc-inner{grid-template-columns:1fr;gap:3rem}
+  .sobre,.video,.localizacao,.contato{padding:5rem 1.5rem}
+  .galeria-header,.carousel-controls{padding-left:1.5rem;padding-right:1.5rem}
+  .carousel-track{padding:0 1.5rem}
+  .carousel-slide{flex:0 0 calc(82% - .6rem)}
+  .video-phone{width:230px}
+  footer{flex-direction:column;text-align:center;padding:2rem 1.5rem}
+  .footer-links{justify-content:center}
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="mainNav">
-  <a class="nav-logo" href="file:///C:/Users/LucasQueiroz/Downloads/index.html#"><span>✦</span> Chácara Samambaia</a>
+  <a class="nav-logo" href="#">&#10022; Chacara Samambaia</a>
   <ul class="nav-links">
-    <li><a href="file:///C:/Users/LucasQueiroz/Downloads/index.html#sobre">Sobre</a></li>
-    <li><a href="file:///C:/Users/LucasQueiroz/Downloads/index.html#galeria">Galeria</a></li>
-    <li><a href="file:///C:/Users/LucasQueiroz/Downloads/index.html#video">Vídeo</a></li>
-    <li><a href="file:///C:/Users/LucasQueiroz/Downloads/index.html#localizacao">Localização</a></li>
-    <li><a href="file:///C:/Users/LucasQueiroz/Downloads/index.html#contato">Contato</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#localizacao">Localizacao</a></li>
+    <li><a href="#contato">Contato</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-slides">
-    <div class="hero-slide active"></div>
-    <div class="hero-slide"></div>
-    <div class="hero-slide"></div>
-    <div class="hero-slide"></div>
+    <div class="hero-slide hs1 active"></div>
+    <div class="hero-slide hs2"></div>
+    <div class="hero-slide hs3"></div>
+    <div class="hero-slide hs4"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Propriedade à Venda · Goiânia – GO</p>
-    <h1 class="hero-title">Chácara<br><em>Samambaia</em></h1>
-    <p class="hero-address">
-      Av. Samambaia esq. com Rua 1<br>
-      Chácaras de Recreio Samambaia · CEP 74691-300
-    </p>
+    <p class="hero-eyebrow">Propriedade a Venda - Goiania GO</p>
+    <h1 class="hero-title">Chacara<br><em>Samambaia</em></h1>
+    <p class="hero-address">Av. Samambaia esq. com Rua 1<br>Chacaras de Recreio Samambaia - CEP 74691-300</p>
   </div>
   <div class="hero-scroll">Explorar</div>
 </section>
 
-<!-- SOBRE / DADOS -->
-<section class="intro-section" id="sobre">
-  <div class="intro-inner">
-    <div class="intro-text">
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="sobre-inner">
+    <div class="sobre-text">
       <div class="section-label">Sobre a Propriedade</div>
-      <h2 class="section-title">Um refúgio <em>verde</em><br>no coração de Goiânia</h2>
-      <p>A Chácara Samambaia é uma propriedade singular, inserida em um dos endereços mais arborizados e tranquilos de Goiânia. Com ampla área de lazer, mata nativa, espelhos d'água e edificações de caráter — um investimento raro para quem busca qualidade de vida sem abrir mão da localização privilegiada.</p>
-      <p>O conjunto arquitetônico reúne edificação principal de múltiplos pavimentos, área administrativa independente, piscinas semiolímpicas e jardins maduros com palmeiras imperiais — de dia e de noite, uma ambiência única.</p>
-      <a href="file:///C:/Users/LucasQueiroz/Downloads/index.html#contato" class="cta-btn">Solicitar Informações</a>
+      <h2 class="section-title">Um refugio <em>verde</em><br>no coracao de Goiania</h2>
+      <p>A Chacara Samambaia e uma propriedade singular, inserida em um dos enderecos mais arborizados e tranquilos de Goiania. Com ampla area de lazer, mata nativa, espelhos d'agua e edificacoes de carater - um investimento raro para quem busca qualidade de vida sem abrir mao da localizacao privilegiada.</p>
+      <p>O conjunto arquitetonico reune edificacao principal de multiplos pavimentos, area administrativa independente, piscinas semiolimpicas e jardins maduros com palmeiras imperiais - de dia e de noite, uma ambiencia unica.</p>
+      <a href="#contato" class="cta-btn">Solicitar Informacoes</a>
     </div>
     <div>
-      <div class="section-label">Características</div>
+      <div class="section-label">Caracteristicas</div>
       <h2 class="section-title">Os <em>detalhes</em></h2>
       <div class="dados-grid">
-        <div class="dado"><div class="dado-icon">🌿</div><div class="dado-label">Área Total</div><div class="dado-value">Grande Porte<br><small>Área a confirmar</small></div></div>
-        <div class="dado"><div class="dado-icon">🏊</div><div class="dado-label">Piscinas</div><div class="dado-value">2 Unidades<br><small>Semiolímpicas</small></div></div>
-        <div class="dado"><div class="dado-icon">🏢</div><div class="dado-label">Edificações</div><div class="dado-value">Múltiplos Blocos<br><small>2 pavimentos</small></div></div>
-        <div class="dado"><div class="dado-icon">🌴</div><div class="dado-label">Vegetação</div><div class="dado-value">Mata Nativa<br><small>Palmeiras imperiais</small></div></div>
-        <div class="dado"><div class="dado-icon">💧</div><div class="dado-label">Espelho d'Água</div><div class="dado-value">Lago Natural<br><small>Com iluminação</small></div></div>
-        <div class="dado"><div class="dado-icon">📍</div><div class="dado-label">Zoneamento</div><div class="dado-value">Recreio<br><small>Chácaras Samambaia</small></div></div>
+        <div class="dado"><div class="dado-icon">&#127807;</div><div class="dado-label">Area Total</div><div class="dado-value">Grande Porte<br><small>Area a confirmar</small></div></div>
+        <div class="dado"><div class="dado-icon">&#127946;</div><div class="dado-label">Piscinas</div><div class="dado-value">2 Unidades<br><small>Semiolimpicas</small></div></div>
+        <div class="dado"><div class="dado-icon">&#127970;</div><div class="dado-label">Edificacoes</div><div class="dado-value">Multiplos Blocos<br><small>2 pavimentos</small></div></div>
+        <div class="dado"><div class="dado-icon">&#127796;</div><div class="dado-label">Vegetacao</div><div class="dado-value">Mata Nativa<br><small>Palmeiras imperiais</small></div></div>
+        <div class="dado"><div class="dado-icon">&#128167;</div><div class="dado-label">Espelho d'Agua</div><div class="dado-value">Lago Natural<br><small>Com iluminacao</small></div></div>
+        <div class="dado"><div class="dado-icon">&#128205;</div><div class="dado-label">Zoneamento</div><div class="dado-value">Recreio<br><small>Chacaras Samambaia</small></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- GALERIA -->
-<section class="galeria-section" id="galeria">
+<section class="galeria" id="galeria">
   <div class="galeria-header">
     <div class="section-label">Galeria de Fotos</div>
-    <h2 class="section-title">Cada ângulo, <em>uma revelação</em></h2>
+    <h2 class="section-title">Cada angulo, <em>uma revelacao</em></h2>
   </div>
   <div class="carousel-outer">
     <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-slide" onclick="openLightbox(0)"><span class="slide-num">01</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255331.jpg" alt="Piscina principal"></div>
-      <div class="carousel-slide" onclick="openLightbox(1)"><span class="slide-num">02</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255330.jpg" alt="Bloco administrativo"></div>
-      <div class="carousel-slide" onclick="openLightbox(2)"><span class="slide-num">03</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255329.jpg" alt="Arborização"></div>
-      <div class="carousel-slide" onclick="openLightbox(3)"><span class="slide-num">04</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255328.jpg" alt="Jardim ao pôr do sol"></div>
-      <div class="carousel-slide" onclick="openLightbox(4)"><span class="slide-num">05</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255327.jpg" alt="Fachada principal"></div>
-      <div class="carousel-slide" onclick="openLightbox(5)"><span class="slide-num">06</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255326.jpg" alt="Vista noturna com lago"></div>
-      <div class="carousel-slide" onclick="openLightbox(6)"><span class="slide-num">07</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255325.jpg" alt="Fachada lateral dia"></div>
-      <div class="carousel-slide" onclick="openLightbox(7)"><span class="slide-num">08</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255324.jpg" alt="Fachada frente"></div>
-      <div class="carousel-slide" onclick="openLightbox(8)"><span class="slide-num">09</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255323.jpg" alt="Corredor vermelho"></div>
-      <div class="carousel-slide" onclick="openLightbox(9)"><span class="slide-num">10</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255322.jpg" alt="Detalhe corredor"></div>
-      <div class="carousel-slide" onclick="openLightbox(10)"><span class="slide-num">11</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255321.jpg" alt="Vista noturna gramado"></div>
-      <div class="carousel-slide" onclick="openLightbox(11)"><span class="slide-num">12</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255320.jpg" alt="Passagem lateral"></div>
-      <div class="carousel-slide" onclick="openLightbox(12)"><span class="slide-num">13</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255319.jpg" alt="Lateral arborizada"></div>
-      <div class="carousel-slide" onclick="openLightbox(13)"><span class="slide-num">14</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255318.jpg" alt="Entrada principal"></div>
-      <div class="carousel-slide" onclick="openLightbox(14)"><span class="slide-num">15</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255317.jpg" alt="Bloco laranja"></div>
-      <div class="carousel-slide" onclick="openLightbox(15)"><span class="slide-num">16</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255316.jpg" alt="Palmeiras e muro"></div>
-      <div class="carousel-slide" onclick="openLightbox(16)"><span class="slide-num">17</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255315.jpg" alt="Salão externo"></div>
-      <div class="carousel-slide" onclick="openLightbox(17)"><span class="slide-num">18</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255314.jpg" alt="Piscina semiolímpica"></div>
-      <div class="carousel-slide" onclick="openLightbox(18)"><span class="slide-num">19</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255313.jpg" alt="Piscina com palmeiras"></div>
-      <div class="carousel-slide" onclick="openLightbox(19)"><span class="slide-num">20</span><img src="file:///C:/Users/LucasQueiroz/Downloads/1000255312.jpg" alt="Lago ao amanhecer"></div>
+      <div class="carousel-slide" onclick="openLightbox(0)"><span class="slide-num">01</span><img src="1000255331.jpg" alt="Piscina principal"></div>
+      <div class="carousel-slide" onclick="openLightbox(1)"><span class="slide-num">02</span><img src="1000255330.jpg" alt="Bloco administrativo"></div>
+      <div class="carousel-slide" onclick="openLightbox(2)"><span class="slide-num">03</span><img src="1000255329.jpg" alt="Arborizacao"></div>
+      <div class="carousel-slide" onclick="openLightbox(3)"><span class="slide-num">04</span><img src="1000255328.jpg" alt="Jardim por do sol"></div>
+      <div class="carousel-slide" onclick="openLightbox(4)"><span class="slide-num">05</span><img src="1000255327.jpg" alt="Fachada principal"></div>
+      <div class="carousel-slide" onclick="openLightbox(5)"><span class="slide-num">06</span><img src="1000255326.jpg" alt="Vista noturna lago"></div>
+      <div class="carousel-slide" onclick="openLightbox(6)"><span class="slide-num">07</span><img src="1000255325.jpg" alt="Fachada lateral"></div>
+      <div class="carousel-slide" onclick="openLightbox(7)"><span class="slide-num">08</span><img src="1000255324.jpg" alt="Fachada frente"></div>
+      <div class="carousel-slide" onclick="openLightbox(8)"><span class="slide-num">09</span><img src="1000255323.jpg" alt="Corredor vermelho"></div>
+      <div class="carousel-slide" onclick="openLightbox(9)"><span class="slide-num">10</span><img src="1000255322.jpg" alt="Detalhe corredor"></div>
+      <div class="carousel-slide" onclick="openLightbox(10)"><span class="slide-num">11</span><img src="1000255321.jpg" alt="Vista noturna gramado"></div>
+      <div class="carousel-slide" onclick="openLightbox(11)"><span class="slide-num">12</span><img src="1000255320.jpg" alt="Passagem lateral"></div>
+      <div class="carousel-slide" onclick="openLightbox(12)"><span class="slide-num">13</span><img src="1000255319.jpg" alt="Lateral arborizada"></div>
+      <div class="carousel-slide" onclick="openLightbox(13)"><span class="slide-num">14</span><img src="1000255318.jpg" alt="Entrada principal"></div>
+      <div class="carousel-slide" onclick="openLightbox(14)"><span class="slide-num">15</span><img src="1000255317.jpg" alt="Bloco laranja"></div>
+      <div class="carousel-slide" onclick="openLightbox(15)"><span class="slide-num">16</span><img src="1000255316.jpg" alt="Palmeiras e muro"></div>
+      <div class="carousel-slide" onclick="openLightbox(16)"><span class="slide-num">17</span><img src="1000255315.jpg" alt="Salao externo"></div>
+      <div class="carousel-slide" onclick="openLightbox(17)"><span class="slide-num">18</span><img src="1000255314.jpg" alt="Piscina semiolimpica"></div>
+      <div class="carousel-slide" onclick="openLightbox(18)"><span class="slide-num">19</span><img src="1000255313.jpg" alt="Piscina com palmeiras"></div>
+      <div class="carousel-slide" onclick="openLightbox(19)"><span class="slide-num">20</span><img src="1000255312.jpg" alt="Lago ao amanhecer"></div>
     </div>
   </div>
   <div class="carousel-controls">
     <div class="carousel-btns">
-      <button class="carousel-btn" onclick="moveCarousel(-1)">←</button>
-      <button class="carousel-btn" onclick="moveCarousel(1)">→</button>
+      <button class="carousel-btn" onclick="moveCarousel(-1)">&#8592;</button>
+      <button class="carousel-btn" onclick="moveCarousel(1)">&#8594;</button>
     </div>
     <div class="carousel-dots" id="carouselDots"></div>
   </div>
@@ -267,110 +269,95 @@
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-  <button class="lb-close" onclick="closeLightbox()">×</button>
-  <button class="lb-prev" onclick="lbNav(-1)">‹</button>
-  <img id="lbImg" src="file:///C:/Users/LucasQueiroz/Downloads/index.html" alt="">
-  <button class="lb-next" onclick="lbNav(1)">›</button>
+  <button class="lb-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lb-prev" onclick="lbNav(-1)">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" onclick="lbNav(1)">&#8250;</button>
 </div>
 
-<!-- VÍDEO -->
-<section class="video-section" id="video">
+<!-- VIDEO -->
+<section class="video" id="video">
   <div class="video-inner">
     <div class="video-text">
-      <div class="section-label">Tour em Vídeo</div>
+      <div class="section-label">Tour em Video</div>
       <h2 class="section-title">Sinta a <em>atmosfera</em><br>da propriedade</h2>
-      <p>Um passeio visual pelos ambientes da Chácara Samambaia — do amanhecer entre as palmeiras imperiais às luzes do entardecer refletidas no lago. Cada detalhe revela o caráter único deste espaço.</p>
+      <p>Um passeio visual pelos ambientes da Chacara Samambaia - do amanhecer entre as palmeiras imperiais as luzes do entardecer refletidas no lago.</p>
       <div class="play-row">
-        <button class="play-btn" id="playBtn" onclick="toggleVideo()">
-          <span id="playIcon">▶</span>
+        <button class="play-btn" onclick="toggleVideo()">
+          <span id="playIcon">&#9654;</span>
           <span id="playLabel">Reproduzir</span>
         </button>
-        <button class="mute-btn" id="muteBtn" onclick="toggleMute()">🔇 Som</button>
+        <button class="mute-btn" onclick="toggleMute()" id="muteBtn">&#128263; Som</button>
       </div>
     </div>
     <div class="video-player-wrap">
       <div class="video-phone">
-        <div class="video-phone-screen">
-          <video id="chacaraVideo" src="VID-20260402-WA0011.mp4" playsinline="" loop="" muted="" preload="metadata" poster="1000255312.jpg">
-          </video>
+        <div class="video-screen">
+          <video id="chacaraVideo" src="VID-20260402-WA0011.mp4" playsinline loop muted preload="metadata" poster="1000255312.jpg"></video>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LOCALIZAÇÃO -->
-<section class="localizacao-section" id="localizacao">
+<!-- LOCALIZACAO -->
+<section class="localizacao" id="localizacao">
   <div class="loc-inner">
     <div>
-      <div class="section-label">Localização</div>
+      <div class="section-label">Localizacao</div>
       <h2 class="section-title">Onde o <em>verde</em><br>encontra a cidade</h2>
       <div class="loc-info">
         <div class="loc-item">
-          <div class="loc-icon">📍</div>
-          <div class="loc-text">
-            <strong>Endereço</strong>
-            <span>Av. Samambaia esq. com Rua 1<br>Chácaras de Recreio Samambaia<br>Goiânia – GO</span>
-          </div>
+          <div class="loc-icon">&#128205;</div>
+          <div class="loc-text"><strong>Endereco</strong><span>Av. Samambaia esq. com Rua 1<br>Chacaras de Recreio Samambaia<br>Goiania - GO</span></div>
         </div>
         <div class="loc-item">
-          <div class="loc-icon">📮</div>
+          <div class="loc-icon">&#128206;</div>
           <div class="loc-text"><strong>CEP</strong><span>74691-300</span></div>
         </div>
         <div class="loc-item">
-          <div class="loc-icon">🏙️</div>
-          <div class="loc-text"><strong>Região</strong><span>Zona Noroeste de Goiânia<br>Acesso à BR-060 e Anel Viário</span></div>
+          <div class="loc-icon">&#127961;</div>
+          <div class="loc-text"><strong>Regiao</strong><span>Zona Noroeste de Goiania<br>Acesso a BR-060 e Anel Viario</span></div>
         </div>
         <div class="loc-item">
-          <div class="loc-icon">🌳</div>
-          <div class="loc-text"><strong>Entorno</strong><span>Alta arborização e privacidade<br>Chácaras de Recreio</span></div>
+          <div class="loc-icon">&#127795;</div>
+          <div class="loc-text"><strong>Entorno</strong><span>Alta arborizacao e privacidade<br>Chacaras de Recreio</span></div>
         </div>
       </div>
     </div>
-    <div class="map-embed">
-      <iframe src="./Chácara Samambaia — Goiânia_files/embed.html" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Chácara Samambaia">
-      </iframe>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.1!2d-49.3892!3d-16.5978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef187cda9e5bd%3A0x8e9af9dade5a0fe9!2sCh%C3%A1caras%20de%20Recreio%20Samambaia%2C%20Goi%C3%A2nia%20-%20GO%2C%2074691-300!5e0!3m2!1spt-BR!2sbr!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localizacao Chacara Samambaia"></iframe>
     </div>
   </div>
 </section>
 
 <!-- CONTATO -->
-<section class="contato-section" id="contato">
+<section class="contato" id="contato">
   <div class="section-label">Contato</div>
   <h2 class="section-title">Pronto para <em>conhecer</em>?</h2>
-  <p class="contato-sub">
-    Entre em contato para agendar uma visita<br>ou receber o dossiê completo da propriedade.
-  </p>
+  <p class="contato-sub">Entre em contato para agendar uma visita<br>ou receber o dossie completo da propriedade.</p>
   <div class="contato-btns">
-    <a href="https://wa.me/5562999719566?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Ch%C3%A1cara%20Samambaia." class="btn-wpp" target="_blank">
-      💬 Falar no WhatsApp
-    </a>
-    <a href="file:///C:/cdn-cgi/l/email-protection#b4d7dcd5d7d5c6d5c7d9d5d9d6d5ddd5d1c2d1dac0dbc7f4d3d9d5ddd89ad7dbd9" class="btn-tel">
-      ✉️ Enviar E-mail
-    </a>
-    <a href="https://instagram.com/chacarasamambaiaeventos" class="btn-ig" target="_blank">
-      📸 Instagram
-    </a>
-    <a href="http://www.facebook.com/share/1FRZY4Xxu7" class="btn-fb" target="_blank">
-      📘 Facebook
-    </a>
+    <a href="https://wa.me/5562999719566?text=Ola!%20Tenho%20interesse%20na%20Chacara%20Samambaia." class="btn-wpp" target="_blank">&#128172; WhatsApp</a>
+    <a href="mailto:chacarasmambaiaeventos@gmail.com" class="btn-email">&#9993; E-mail</a>
+    <a href="https://instagram.com/chacarasamambaiaeventos" class="btn-ig" target="_blank">&#128247; Instagram</a>
+    <a href="http://www.facebook.com/share/1FRZY4Xxu7" class="btn-fb" target="_blank">&#128241; Facebook</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo"><span>✦</span> Chácara Samambaia</div>
-  <p>Av. Samambaia, Goiânia – GO · CEP 74691-300</p>
-  <div style="display:flex;gap:1.5rem;align-items:center;">
-    <a href="https://wa.me/5562999719566" target="_blank" style="color:rgba(255,255,255,0.3);text-decoration:none;font-size:0.63rem;letter-spacing:0.1em;transition:color 0.3s;" onmouseover="this.style.color=&#39;#25D366&#39;" onmouseout="this.style.color=&#39;rgba(255,255,255,0.3)&#39;">WhatsApp</a>
-    <a href="file:///C:/cdn-cgi/l/email-protection#43202b2220223122302e222e21222a222635262d372c3003242e222a2f6d202c2e" style="color:rgba(255,255,255,0.3);text-decoration:none;font-size:0.63rem;letter-spacing:0.1em;transition:color 0.3s;" onmouseover="this.style.color=&#39;var(--gold)&#39;" onmouseout="this.style.color=&#39;rgba(255,255,255,0.3)&#39;">E-mail</a>
-    <a href="https://instagram.com/chacarasamambaiaeventos" target="_blank" style="color:rgba(255,255,255,0.3);text-decoration:none;font-size:0.63rem;letter-spacing:0.1em;transition:color 0.3s;" onmouseover="this.style.color=&#39;#E1306C&#39;" onmouseout="this.style.color=&#39;rgba(255,255,255,0.3)&#39;">Instagram</a>
-    <a href="http://www.facebook.com/share/1FRZY4Xxu7" target="_blank" style="color:rgba(255,255,255,0.3);text-decoration:none;font-size:0.63rem;letter-spacing:0.1em;transition:color 0.3s;" onmouseover="this.style.color=&#39;#1877F2&#39;" onmouseout="this.style.color=&#39;rgba(255,255,255,0.3)&#39;">Facebook</a>
+  <div class="footer-logo">&#10022; Chacara Samambaia</div>
+  <p>Goiania - GO - CEP 74691-300</p>
+  <div class="footer-links">
+    <a href="https://wa.me/5562999719566" target="_blank">WhatsApp</a>
+    <a href="mailto:chacarasmambaiaeventos@gmail.com">E-mail</a>
+    <a href="https://instagram.com/chacarasamambaiaeventos" target="_blank">Instagram</a>
+    <a href="http://www.facebook.com/share/1FRZY4Xxu7" target="_blank">Facebook</a>
   </div>
 </footer>
 
-<script data-cfasync="false" src="file:///C:/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// NAV SCROLL
+<script>
+// NAV
 const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
 
@@ -409,18 +396,16 @@ function updateDots() {
 }
 
 function getSlideWidth() {
-  const s = slides[0].getBoundingClientRect();
-  return s.width + 19.2;
+  return slides[0].getBoundingClientRect().width + 19.2;
 }
 
 function goToSlide(idx) {
   currentSlide = Math.max(0, Math.min(idx, totalGroups() - 1));
-  const offset = currentSlide * visibleCount() * getSlideWidth();
-  track.style.transform = `translateX(-${offset}px)`;
+  track.style.transform = 'translateX(-' + (currentSlide * visibleCount() * getSlideWidth()) + 'px)';
   updateDots();
 }
 
-window.moveCarousel = (dir) => goToSlide(currentSlide + dir);
+window.moveCarousel = function(dir) { goToSlide(currentSlide + dir); };
 
 // LIGHTBOX
 const lbImages = [
@@ -434,9 +419,20 @@ let lbCurrent = 0;
 const lightbox = document.getElementById('lightbox');
 const lbImg = document.getElementById('lbImg');
 
-window.openLightbox = (idx) => { lbCurrent = idx; lbImg.src = lbImages[idx]; lightbox.classList.add('open'); document.body.style.overflow = 'hidden'; };
-window.closeLightbox = () => { lightbox.classList.remove('open'); document.body.style.overflow = ''; };
-window.lbNav = (dir) => { lbCurrent = (lbCurrent + dir + lbImages.length) % lbImages.length; lbImg.src = lbImages[lbCurrent]; };
+window.openLightbox = function(idx) {
+  lbCurrent = idx;
+  lbImg.src = lbImages[idx];
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+window.closeLightbox = function() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+};
+window.lbNav = function(dir) {
+  lbCurrent = (lbCurrent + dir + lbImages.length) % lbImages.length;
+  lbImg.src = lbImages[lbCurrent];
+};
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => {
   if (!lightbox.classList.contains('open')) return;
@@ -452,48 +448,61 @@ const playLabel = document.getElementById('playLabel');
 const muteBtn = document.getElementById('muteBtn');
 let isMuted = true;
 
-window.toggleVideo = () => {
+window.toggleVideo = function() {
   if (video.paused) {
     video.play();
-    playIcon.textContent = '⏸';
+    playIcon.innerHTML = '&#9646;&#9646;';
     playLabel.textContent = 'Pausar';
   } else {
     video.pause();
-    playIcon.textContent = '▶';
+    playIcon.innerHTML = '&#9654;';
     playLabel.textContent = 'Reproduzir';
   }
 };
 
-window.toggleMute = () => {
+window.toggleMute = function() {
   isMuted = !isMuted;
   video.muted = isMuted;
-  muteBtn.textContent = isMuted ? '🔇 Som' : '🔊 Mudo';
+  muteBtn.innerHTML = isMuted ? '&#128263; Som' : '&#128266; Mudo';
 };
 
-video.addEventListener('ended', () => { playIcon.textContent = '▶'; playLabel.textContent = 'Reproduzir'; });
+video.addEventListener('ended', () => {
+  playIcon.innerHTML = '&#9654;';
+  playLabel.textContent = 'Reproduzir';
+});
 
-// Auto-play when video section enters viewport
+// Auto-play video when in viewport
 const videoObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       video.play();
-      playIcon.textContent = '⏸';
+      playIcon.innerHTML = '&#9646;&#9646;';
       playLabel.textContent = 'Pausar';
     } else {
       video.pause();
-      playIcon.textContent = '▶';
+      playIcon.innerHTML = '&#9654;';
       playLabel.textContent = 'Reproduzir';
     }
   });
 }, { threshold: 0.4 });
 videoObserver.observe(document.getElementById('video'));
 
-// FADE-IN
-const fadeObserver = new IntersectionObserver((entries) => {
+// FADE IN
+const fadeObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
   });
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.dado, .loc-item').forEach((el, i) => {
- </script></body></html>
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(22px)';
+  el.style.transition = 'opacity 0.6s ease ' + (i * 0.08) + 's, transform 0.6s ease ' + (i * 0.08) + 's';
+  fadeObs.observe(el);
+});
+</script>
+</body>
+</html>
